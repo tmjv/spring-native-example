@@ -44,7 +44,6 @@ $ ./target/com.example.demo.demoapplication
 ```
 
 
-
 ## Functional Tests
 
 When the application is running at *localhost:8080*,  you can perform a `FunctionalTests` to verify the APIs as a HTTP Client view.
@@ -53,3 +52,13 @@ When the application is running at *localhost:8080*,  you can perform a `Functio
 $ mvn clean test -Pfunctional-test
 ```
 
+
+## Resource
+
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.4.4/maven-plugin/reference/html/)
+* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.4.4/maven-plugin/reference/html/#build-image)
+* [Spring Native Reference Guide](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/)
+* [Spring Data Reactive MongoDB](https://docs.spring.io/spring-boot/docs/2.4.4/reference/htmlsingle/#boot-features-mongodb)
+* [Configure the Spring AOT Plugin](https://docs.spring.io/spring-native/docs/0.9.1/reference/htmlsingle/#spring-aot-maven)
+* [Get Started with GraalVM ](https://www.graalvm.org/docs/getting-started/#install-graalvm)
+* [IntelliJ IDEA 2021.1 EAP 5: WSL 2 Support for Maven and Gradle, Support for JSON Path, and More](https://blog.jetbrains.com/idea/2021/02/intellij-idea-2021-1-eap-5/)
