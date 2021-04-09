@@ -1,7 +1,7 @@
 # Building your first Spring Native Application
 
 
-The [Spring Native 0.91 is released](https://spring.io/blog/2021/03/11/announcing-spring-native-beta), it is great news for Spring developers. Quarkus got GraalVM native image and Kubernetes support since it was born, and Micronaunt and Oracle Helidon also added GraalVM support for a long time.
+The [Spring Native beta is released](https://spring.io/blog/2021/03/11/announcing-spring-native-beta), it is great news for Spring developers. Quarkus got GraalVM native image and Kubernetes support since it was born, and Micronaunt and Oracle Helidon also added GraalVM support for a long time.
 
 As explained in the [GraalVM introduction page](https://www.graalvm.org/docs/introduction/), *GraalVM is a high-performance JDK distribution designed to accelerate  the execution of applications written in Java and other JVM languages  along with support for JavaScript, Ruby, Python, and a number of other  popular languages. GraalVM’s polyglot capabilities make it possible to mix multiple  programming languages in a single application while eliminating foreign  language call costs.* 
 
@@ -300,9 +300,11 @@ I prepared [3 Github actions workflow files](https://github.com/hantsy/spring-na
 
 Ideally, we can focus on the development like building a general Spring Boot application, let CI to hand over the tedious work of building native applications.  
 
-But unfortunately, there are a lot of limitations in the current version, check the [Support](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/index.html#support) section to get a check list of the supported features at the moment. I also tried to enable Data Mongo auditing feature, it does not work on native mode.
+But unfortunately, there are a lot of limitations in the current version, check the [Support](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/index.html#support) section to get a check list of the supported features at the moment. I also tried to enable Data Mongo auditing feature, it does not work on the native mode.
 
-Quarkus invents Arc container which provides a subset of CDI APIs for developers, but integrally it produces static codes for beans at compile time instead of generating  dynamic proxies at runtime.
+Grab a copy of the source codes from [hantsy/spring-native-example](https://github.com/hantsy/spring-native-example/) to experience yourself.
+
+Quarkus invents the Arc container which provides a subset of CDI APIs for developers, but integrally it produces static codes for beans at compile time instead of generating  dynamic proxies at runtime.
 
 In my opinion, I would like to see some similar mechanism in Spring native that provide compile-time byte code enhancement to replace the Spring built-in dynamic proxies for beans, and make it also an alternative to the current Spring IOC container. 
 
