@@ -306,7 +306,5 @@ But unfortunately, there are a lot of limitations in the current version, check 
 
 Grab a copy of the source codes from [hantsy/spring-native-example](https://github.com/hantsy/spring-native-example/) to experience yourself.
 
-Quarkus invents the Arc container which provides a subset of CDI APIs for developers, but integrally it produces static codes for beans at compile time instead of generating  dynamic proxies at runtime.
-
-In my opinion, I would like to see some similar mechanism in Spring native that provide compile-time byte code enhancement to replace the Spring built-in dynamic proxies for beans, and make it also an alternative to the current Spring IOC container. 
+Quarkus invents the Arc container which provides a subset of CDI APIs for developers, but integrally it produces static codes for beans at compile time instead of generating  dynamic proxies at runtime. In my opinion, I would like to see some similar mechanism in Spring native that provide compile-time byte code enhancement to replace the Spring built-in dynamic proxies for beans, and make it as an alternative to the current Spring IOC container. 
 
