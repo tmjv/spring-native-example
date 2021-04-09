@@ -298,9 +298,11 @@ I prepared [3 Github actions workflow files](https://github.com/hantsy/spring-na
 * `build-docker-image` -  build the application into a layered docker image via `spring-boot:build-image` goal, and start up the application and verify it using  `FunctionalTests` mentioned above.
 * `build-native-image` - build the application into system native executable via GraalVM native image, and start up it and verify the functionality by running  `FunctionalTests`.
 
-Ideally, we can focus on the development like building a general Spring Boot application, let CI to hand over the tedious work of building native applications.  
+Ideally, when building Spring Native applications, we only need to focus on the development like building a general Spring Boot application, let CI to hand over the tedious work of building native applications.  
 
-But unfortunately, there are a lot of limitations in the current version, check the [Support](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/index.html#support) section to get a check list of the supported features at the moment. I also tried to enable Data Mongo auditing feature, it does not work on the native mode.
+But unfortunately, there are a lot of limitations in the current version, check the [Support](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/index.html#support) section to get a check list of the supported features at the moment. To use those featuers are not in the support list, you could have to give up *Spring Native* and switch back to use JVM again.
+
+>I also tried to enable Data Mongo auditing feature, it does not work on the native mode. 
 
 Grab a copy of the source codes from [hantsy/spring-native-example](https://github.com/hantsy/spring-native-example/) to experience yourself.
 
