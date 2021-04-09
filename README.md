@@ -1,5 +1,5 @@
 # spring-native-example
-An example application built with Spring Native.
+An example application built with Spring Native. Please [this blog entry](https://hantsy.medium.com/building-your-first-spring-native-application-ae169136e544) for details.
 
 ## Prerequisites 
 
