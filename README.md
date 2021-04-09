@@ -5,6 +5,7 @@ An example application built with Spring Native. Please [this blog entry](https:
 
 * Java 11
 * Apache Maven 3.8.1
+* Docker 
 * GraalVM 21 if building the application to native executable application by GraalVM native image
 
 ## Build
