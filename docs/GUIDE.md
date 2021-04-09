@@ -18,7 +18,7 @@ Assuming you have installed the following software.
 * Java 11
 * Apache Maven 3.8.1
 * Docker, required when building the application with `spring-boot:build-image`
-* Graal VM 21.0.0.2, required when building native image directly via native image maven plugin.
+* GraalVM 21.0.0.2, required when building native image directly via native image maven plugin.
 
 Open your browser, navigate to https://start.spring.io.
 
@@ -277,7 +277,7 @@ docker run -rm hantsy/spring-native-demo
 
 Make sure you have installed GraalVM firstly, follow the [Getting Started](https://www.graalvm.org/docs/getting-started/) guide to install it.
 
-> Unde Windows, GraalVM is still experimental. Consider installing it into a WSL2 system, and IDEA and VSCode have great WSL support.
+> Under Windows, GraalVM is still experimental. Consider installing it into a Linux system via  WSL2 under Windows. The latest IDEA and VSCode have great WSL2 support.
 
 ```bash
 mvn clean package spring-boot:build-image -Pspring-native,build-native-image -DskipTests
@@ -300,11 +300,17 @@ I prepared [3 Github actions workflow files](https://github.com/hantsy/spring-na
 
 Ideally, when building Spring Native applications, we only need to focus on the development like building a general Spring Boot application, let CI to hand over the tedious work of building native applications.  
 
-But unfortunately, there are a lot of limitations in the current version, check the [Support](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/index.html#support) section to get a check list of the supported features at the moment. To use those featuers are not in the support list, you could have to give up *Spring Native* and switch back to use JVM again.
+But unfortunately, there are a lot of limitations in the current version, check the [Support](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/index.html#support) section to get a check list of the supported features at the moment. To use those features are not in the support list, you could have to give up *Spring Native* and switch back to use JVM again.
 
 >I also tried to enable Data Mongo auditing feature, it does not work on the native mode. 
 
 Grab a copy of the source codes from [hantsy/spring-native-example](https://github.com/hantsy/spring-native-example/) to experience yourself.
 
-Quarkus invents the Arc container which provides a subset of CDI APIs for developers, but integrally it produces static codes for beans at compile time instead of generating  dynamic proxies at runtime. In my opinion, I would like to see some similar mechanism in Spring native that provide compile-time byte code enhancement to replace the Spring built-in dynamic proxies for beans, and make it as an alternative to the current Spring IOC container. 
+
+
+## The Final Words
+
+Quarkus invents the Arc container which provides a subset of CDI APIs for developers, but integrally it produces static codes for beans at compile time instead of generating  dynamic proxies at runtime.
+
+In my opinion, I would like to see some similar mechanism in Spring native that provide compile-time byte code enhancement to replace the Spring built-in dynamic proxies for beans, and make it as an alternative to the current Spring IOC container. 
 
