@@ -122,7 +122,7 @@
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
                             <image>
-                                <name>hantsy/${project.artifactId}:latest</name>
+                                <name>tmjv/${project.artifactId}:latest</name>
                                 <builder>paketobuildpacks/builder:tiny</builder>
                                 <env>
                                     <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
