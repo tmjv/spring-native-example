@@ -9,7 +9,7 @@ services:
     ports:
       - "27017:27017"
   demo:
-    image: hantsy/spring-native-demo
+    image: tmjv/spring-native-example
     environment:
       - "SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/blog"
     ports:
