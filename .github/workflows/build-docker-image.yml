@@ -1,6 +1,7 @@
 name: build-docker-image
 
 on:
+  workflow_dispatch:
   push:
     paths-ignore:
       - "docs/**"
@@ -31,7 +32,10 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Build Docker Image
-        run: mvn clean spring-boot:build-image -DskipTests -Pspring-native,build-docker-image
+        run: |
+          mvn clean spring-boot:build-image -DskipTests -Pspring-native,build-docker-image
+          echo 'listing docker images'
+          docker image ls
 
       - name: Run App in Docker
         run: |
